@@ -1205,9 +1205,34 @@ button, a {
 
 .room-pricing-wrap {
   display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.room-pricing-top {
+  display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 6px;
+}
+
+.room-tariff-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--brand-forest-light);
+  border: 1px solid rgba(27, 67, 50, 0.15);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--brand-forest);
+  width: fit-content;
+}
+
+.room-tariff-pill .dot-sep {
+  opacity: 0.4;
 }
 
 .room-pricing-left {
@@ -1608,10 +1633,24 @@ button, a {
 
 .modal-price-amount {
   font-family: var(--font-sans);
-  font-size: 1.18rem;
+  font-size: 1.12rem;
   font-weight: 800;
   color: var(--brand-forest);
-  line-height: 1.1;
+  line-height: 1.2;
+}
+
+.modal-pricing-dual {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brand-forest);
+  flex-wrap: wrap;
+}
+
+.modal-tier-divider {
+  opacity: 0.4;
 }
 
 .modal-price-period {

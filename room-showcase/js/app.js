@@ -185,8 +185,17 @@ function renderRooms(rooms) {
 
           <div class="room-card-footer">
             <div class="room-pricing-wrap">
-              <span class="room-price-amount">${room.priceLabel}</span>
-              <span class="room-price-period">${t("perNight")}</span>
+              <div class="room-pricing-top">
+                <span class="room-price-amount">${room.priceLabel}</span>
+                <span class="room-price-period">${t("perNight")}</span>
+              </div>
+              ${(room.priceAC && room.priceNonAC) ? `
+                <div class="room-tariff-pill">
+                  <span class="ac-tag">❄️ AC: <strong>${room.priceAC}</strong></span>
+                  <span class="dot-sep">•</span>
+                  <span class="nonac-tag">🌿 Non-AC: <strong>${room.priceNonAC}</strong></span>
+                </div>
+              ` : ''}
             </div>
 
             <div class="room-card-actions">
@@ -294,9 +303,17 @@ window.openRoomModal = function(roomId) {
   const prevBtn = document.getElementById("modalNavPrev");
   const nextBtn = document.getElementById("modalNavNext");
 
-  modalTitle.textContent = room.name;
-  modalCategory.textContent = room.categoryLabel;
-  modalPrice.textContent = room.priceLabel;
+  if (room.priceAC && room.priceNonAC) {
+    modalPrice.innerHTML = `
+      <div class="modal-pricing-dual">
+        <span class="modal-tier-ac">❄️ AC: <strong>${room.priceAC}</strong></span>
+        <span class="modal-tier-divider">•</span>
+        <span class="modal-tier-nonac">🌿 Non-AC: <strong>${room.priceNonAC}</strong></span>
+      </div>
+    `;
+  } else {
+    modalPrice.textContent = room.priceLabel;
+  }
 
   // Clean glanceable specs (Guests • Area • View)
   if (modalSubtitle) {
