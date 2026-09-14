@@ -349,13 +349,13 @@ button, a {
   gap: 10px;
 }
 
-/* --- Brand Logo (Premium styling on mobile) --- */
+/* --- Brand Logo (Never truncated on mobile) --- */
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 8px;
   min-width: 0;
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
 
 .brand-logo .logo-mark {
@@ -390,7 +390,7 @@ button, a {
 
 .brand-logo .logo-text h1 {
   font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 3.4vw, 1.25rem);
+  font-size: clamp(0.92rem, 3.6vw, 1.25rem);
   font-weight: 700;
   letter-spacing: -0.2px;
   color: var(--brand-forest);
@@ -403,10 +403,16 @@ button, a {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  gap: 8px;
+  gap: 6px;
 }
 
 @media (min-width: 480px) {
+  .header-actions {
+    gap: 8px;
+  }
+}
+
+@media (min-width: 768px) {
   .header-actions {
     gap: 10px;
   }
@@ -535,13 +541,27 @@ button, a {
   border: 1px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 4px 12px rgba(27, 67, 50, 0.25);
   transition: all var(--transition-fast);
+  flex-shrink: 0;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 520px) {
   .header-call-btn {
-    padding: 8px 16px;
-    font-size: 0.84rem;
-    gap: 7px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .header-call-btn .header-call-text {
+    display: none;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 767px) {
+  .header-call-btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    gap: 6px;
   }
 }
 
@@ -2150,6 +2170,23 @@ button, a {
   border-top: 1px solid rgba(27, 67, 50, 0.08);
 }
 
+@media (max-width: 580px) {
+  .clean-map-actions {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+  }
+  .btn-navigate-direct,
+  .btn-view-pin {
+    width: 100%;
+    flex: none;
+    text-align: center;
+    padding: 13px 18px;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+}
+
 .btn-navigate-direct {
   flex: 1;
   background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);
@@ -2250,21 +2287,125 @@ button, a {
 }
 
 /* ==========================================================================
-   SITE FOOTER
+   SITE FOOTER (PREMIUM & MOBILE CLEARED)
    ========================================================================== */
 
 .site-footer {
   background: #FFFFFF;
   border-top: 1px solid var(--border-card);
-  padding: 22px 0;
-  color: var(--text-muted);
-  font-size: 0.82rem;
+  padding: 38px 0 120px; /* 120px bottom clearance guarantees complete visibility above sticky dock */
+  color: var(--text-secondary);
+  font-size: 0.84rem;
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  .site-footer {
+    padding: 48px 0 40px;
+  }
 }
 
 .footer-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 12px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 100%);
+  color: #FAF8F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.footer-hotel-name {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--brand-forest);
+  line-height: 1.2;
+}
+
+.footer-location-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 440px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.footer-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.footer-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F4F7F4;
+  border: 1px solid rgba(27, 67, 50, 0.12);
+  color: var(--brand-forest);
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.footer-chip-btn:hover {
+  background: var(--brand-forest-light);
+  border-color: var(--brand-forest);
+  transform: translateY(-1px);
+}
+
+.footer-chip-btn svg {
+  color: var(--brand-forest);
+}
+
+.footer-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(27, 67, 50, 0.05);
+  border: 1px solid rgba(27, 67, 50, 0.1);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--brand-forest);
+}
+
+.footer-divider {
+  width: 100%;
+  max-width: 300px;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 4px 0;
+}
+
+.footer-copy-text {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
 }
