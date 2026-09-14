@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/room-showcase/index.html" },
+    { "source": "/css/(.*)", "destination": "/room-showcase/css/$1" },
+    { "source": "/js/(.*)", "destination": "/room-showcase/js/$1" },
+    { "source": "/assets/(.*)", "destination": "/room-showcase/assets/$1" },
+    { "source": "/(.*)", "destination": "/room-showcase/$1" }
+  ]
+}
