@@ -303,6 +303,13 @@ window.openRoomModal = function(roomId) {
   const prevBtn = document.getElementById("modalNavPrev");
   const nextBtn = document.getElementById("modalNavNext");
 
+  if (modalTitle) {
+    modalTitle.textContent = room.name;
+  }
+  if (modalCategory) {
+    modalCategory.textContent = room.categoryLabel || room.category;
+  }
+
   if (room.priceAC && room.priceNonAC) {
     modalPrice.innerHTML = `
       <div class="modal-pricing-dual">

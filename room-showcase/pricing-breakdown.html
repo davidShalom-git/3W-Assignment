@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tirupati Cottage - Room Booking System — Pricing Breakdown</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 14mm 14mm 14mm 14mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #1e293b;
+      background: #f8fafc;
+      padding: 24px;
+      line-height: 1.35;
+      font-size: 11px;
+    }
+
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 28px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 6px;
+    }
+
+    /* Header */
+    .doc-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .doc-subtitle {
+      text-align: center;
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 22px;
+      line-height: 1.4;
+    }
+
+    .doc-subtitle strong {
+      color: #0f172a;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e40af;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-intro {
+      font-size: 10px;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    /* Tables */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 22px;
+      font-size: 10px;
+    }
+
+    .pricing-table th,
+    .pricing-table td {
+      padding: 6px 8px;
+      text-align: left;
+      border: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    /* Table 1 Header (Blue) */
+    .table-blue th {
+      background: #1d4ed8;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 10.5px;
+      border-color: #1d4ed8;
+    }
+
+    /* Table 2 Header (Green) */
+    .table-green th {
+      background: #047857;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 10.5px;
+      border-color: #047857;
+    }
+
+    /* Column Widths */
+    .col-num { width: 4%; text-align: center !important; }
+    .col-comp { width: 22%; font-weight: 600; color: #0f172a; }
+    .col-desc { width: 40%; color: #334155; }
+    .col-market { width: 20%; color: #475569; }
+    .col-price { width: 14%; font-weight: 700; color: #0f172a; }
+
+    .pricing-table tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    /* Total Row */
+    .row-total {
+      background: #eff6ff !important;
+      font-weight: 700;
+    }
+
+    .row-total td {
+      border-top: 2px solid #2563eb;
+      font-size: 10.5px;
+      color: #0f172a;
+      padding: 8px;
+    }
+
+    .text-success-total {
+      color: #15803d !important;
+      font-size: 11.5px !important;
+      font-weight: 800;
+    }
+
+    /* Important Callout */
+    .callout-box {
+      background: #f8fafc;
+      border-top: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      font-size: 9.5px;
+      color: #334155;
+      line-height: 1.45;
+      margin-top: 10px;
+    }
+
+    .callout-box strong {
+      color: #0f172a;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .print-bar {
+      max-width: 800px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .btn-pdf {
+      background: #1d4ed8;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-pdf:hover {
+      background: #1e40af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    <button onclick="window.print()" class="btn-pdf">
+      🖨️ Print to PDF / Save as PDF
+    </button>
+  </div>
+
+  <div class="page-container">
+    <h1 class="doc-title">Room Booking System — Pricing Breakdown</h1>
+    <div class="doc-subtitle">
+      Client / Pilot Price: <strong>Rs 12,000 total (one-time)</strong>. Scope: Tirupati Cottage, QR-to-room-gallery, multi-language engine, GPS navigation, visiting card & print suite, domain and deployment.
+    </div>
+
+    <!-- Section 1 -->
+    <h2 class="section-title">1) One-time build fee (your work)</h2>
+    <table class="pricing-table table-blue">
+      <thead>
+        <tr>
+          <th class="col-num">#</th>
+          <th class="col-comp">Component</th>
+          <th class="col-desc">What is included</th>
+          <th class="col-market">Typical market cost (India)</th>
+          <th class="col-price">Your charge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-num">1</td>
+          <td class="col-comp">Discovery & Requirements</td>
+          <td class="col-desc">Property inventory, room categories, Day & Night tariff structure, photography organization, and mobile MVP scope.</td>
+          <td class="col-market">Rs 5,000–Rs 10,000+</td>
+          <td class="col-price">Rs 1,000</td>
+        </tr>
+        <tr>
+          <td class="col-num">2</td>
+          <td class="col-comp">UI / Mobile Room Showcase</td>
+          <td class="col-desc">Mobile room gallery, high-res photos, interactive cards, beds/bath/kitchen amenity tags, 1-tap WhatsApp and Call to Book buttons.</td>
+          <td class="col-market">Rs 12,000–Rs 25,000+</td>
+          <td class="col-price">Rs 3,500</td>
+        </tr>
+        <tr>
+          <td class="col-num">3</td>
+          <td class="col-comp">Multi-Language Support (6 Langs)</td>
+          <td class="col-desc">Complete pilgrimage regional localization: English, தமிழ் (Tamil), తెలుగు (Telugu), हिन्दी (Hindi), ಕನ್ನಡ (Kannada), and മലയാളം (Malayalam).</td>
+          <td class="col-market">Rs 8,000–Rs 18,000+</td>
+          <td class="col-price">Rs 1,500</td>
+        </tr>
+        <tr>
+          <td class="col-num">4</td>
+          <td class="col-comp">GPS Route & Landmark Navigator</td>
+          <td class="col-desc">Google Maps turn-by-turn navigation directly to S.M.A ILLAM gate, distance calculators, and auto/taxi driver visual landmark card.</td>
+          <td class="col-market">Rs 5,000–Rs 12,000+</td>
+          <td class="col-price">Rs 1,000</td>
+        </tr>
+        <tr>
+          <td class="col-num">5</td>
+          <td class="col-comp">Direct WhatsApp & Call Booking</td>
+          <td class="col-desc">Click-to-chat setup with pre-filled guest enquiry message, direct phone dialer to proprietor (Arasu Palani), 0% commission model.</td>
+          <td class="col-market">Rs 6,000–Rs 15,000+</td>
+          <td class="col-price">Rs 1,000</td>
+        </tr>
+        <tr>
+          <td class="col-num">6</td>
+          <td class="col-comp">Luxury Visiting Card & Active QR</td>
+          <td class="col-desc">Front resort facade + back tariff rates (AC ₹2,000 / Non-AC ₹1,500), 100% camera-tested scannable QR code, 300 DPI print-ready PNG/JPG.</td>
+          <td class="col-market">Rs 5,000–Rs 12,000+</td>
+          <td class="col-price">Rs 1,500</td>
+        </tr>
+        <tr>
+          <td class="col-num">7</td>
+          <td class="col-comp">Print Studio & A4 Grid Sheet</td>
+          <td class="col-desc">8-card standard 3.5" &times; 2" A4 print sheet setup with cutting/scissors guides for instant local cardstock printing.</td>
+          <td class="col-market">Rs 3,000–Rs 8,000+</td>
+          <td class="col-price">Rs 500</td>
+        </tr>
+        <tr>
+          <td class="col-num">8</td>
+          <td class="col-comp">Domain Registration & DNS Setup</td>
+          <td class="col-desc">Official 1-Year domain registration (Rs 1,081 billed at actuals) + DNS records, Vercel routing, and secure SSL (HTTPS) certificate.</td>
+          <td class="col-market">Rs 2,500–Rs 6,000+</td>
+          <td class="col-price">Rs 1,500<br><span style="font-size:9px;color:#64748b;">(Rs 1,081 domain + Rs 419 setup)</span></td>
+        </tr>
+        <tr>
+          <td class="col-num">9</td>
+          <td class="col-comp">Testing, Standee & 1-Month Buffer</td>
+          <td class="col-desc">Reception desk QR standee page (qr.html), cross-device testing on Android/iOS, and 1 month of free tariff/photo maintenance buffer.</td>
+          <td class="col-market">Rs 5,000–Rs 12,000+</td>
+          <td class="col-price">Rs 500</td>
+        </tr>
+        <tr class="row-total">
+          <td class="col-num"></td>
+          <td class="col-comp">Total</td>
+          <td class="col-desc"><strong>QR gallery + Multi-language + GPS + Visiting Card + Domain</strong></td>
+          <td class="col-market">Comparable scope: <strong>Rs 51,500–Rs 1,18,000+</strong></td>
+          <td class="col-price text-success-total">Rs 12,000</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 2 -->
+    <h2 class="section-title" style="color: #047857;">2) Recurring platform charges (usage-based, paid by you)</h2>
+    <div class="section-intro">
+      Currently using free tiers for Vercel hosting and direct WhatsApp chat. No monthly maintenance fees. These future charges go directly to providers, not to me.
+    </div>
+    <table class="pricing-table table-green">
+      <thead>
+        <tr>
+          <th style="width: 22%;">Component</th>
+          <th style="width: 18%;">Provider</th>
+          <th style="width: 18%;">Current cost (MVP)</th>
+          <th style="width: 20%;">Future estimate (if scaled)</th>
+          <th style="width: 22%;">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600; color:#0f172a;">Domain Renewal</td>
+          <td>Domain Registrar</td>
+          <td>1st year included (Rs 1,081 paid)</td>
+          <td>~Rs 800–Rs 1,200 per year</td>
+          <td>Yearly renewal to keep custom domain active.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600; color:#0f172a;">Vercel Hosting</td>
+          <td>Vercel</td>
+          <td>Free tier (Rs 0)</td>
+          <td>Rs 0 (Pro plan only if traffic exceeds 100k visits)</td>
+          <td>Free tier is more than sufficient for high-speed cottage bookings.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600; color:#0f172a;">WhatsApp Direct Booking</td>
+          <td>Meta / WhatsApp</td>
+          <td>Free (Click-to-Chat)</td>
+          <td>Rs 0 per month</td>
+          <td>Direct WhatsApp click-to-chat setup has ZERO per-message or monthly API charges.</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600; color:#0f172a;">Google Maps & Route Navigation</td>
+          <td>Google Maps</td>
+          <td>Free tier</td>
+          <td>Rs 0 per month</td>
+          <td>Standard Google Maps GPS navigation links and embeds are 100% free forever.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout-box">
+      <strong>Important:</strong> The <strong>Rs 12,000</strong> is a one-time build fee (including the 1st year domain registration of Rs 1,081). All hosting, GPS maps, and direct WhatsApp booking infrastructure are configured to run on <strong>100% free tiers with zero monthly server costs</strong>. The only future recurring fee is the annual domain renewal (~Rs 800–Rs 1,200/year) after 12 months, paid directly to the registrar.
+    </div>
+  </div>
+
+</body>
+</html>
