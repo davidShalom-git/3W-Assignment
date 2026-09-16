@@ -855,7 +855,9 @@
 
   <!-- Switch Design Tabs -->
   <div class="view-switcher" role="tablist">
-    <button class="view-tab active" id="tabEmerald" onclick="switchDesignStyle('emerald')">🌲 4-Grid Emerald (3D)</button>
+    <button class="view-tab active" id="tabMockupEmeraldQr" onclick="switchDesignStyle('mockup-emerald-qr')">⭐ Emerald Collage (With QR)</button>
+    <button class="view-tab" id="tabMockupIvoryQr" onclick="switchDesignStyle('mockup-ivory-qr')">⭐ Ivory Collage (With QR)</button>
+    <button class="view-tab" id="tabEmerald" onclick="switchDesignStyle('emerald')">🌲 4-Grid Emerald (3D)</button>
     <button class="view-tab" id="tabIvory" onclick="switchDesignStyle('ivory')">🥂 4-Grid Ivory (3D)</button>
     <button class="view-tab" id="tabMockupEmerald" onclick="switchDesignStyle('mockup-emerald')">📸 Desk Emerald</button>
     <button class="view-tab" id="tabMockupIvory" onclick="switchDesignStyle('mockup-ivory')">📸 Desk Ivory</button>
@@ -869,13 +871,13 @@
   </div>
 
   <!-- Flip instruction badge -->
-  <div class="badge-flip-hint" onclick="toggleCardFlip()" id="flipHint">
+  <div class="badge-flip-hint" onclick="toggleCardFlip()" id="flipHint" style="display:none;">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
     <span>Tap / Click Card to Flip (Front ⇄ Back)</span>
   </div>
 
   <!-- 1. Interactive 3D Card View -->
-  <div class="card-scene" id="interactiveView" onclick="toggleCardFlip()">
+  <div class="card-scene" id="interactiveView" onclick="toggleCardFlip()" style="display:none;">
     <div class="card-flipper" id="cardFlipper">
       
       <!-- FRONT SIDE: 4-GRID BEDROOMS (LEFT) + DETAILS (RIGHT) -->
@@ -989,6 +991,22 @@
   </div>
 
   <!-- 2. Mockup Views (Real Bedroom Photos) -->
+  <div class="mockup-container" id="mockupEmeraldQrView" style="display:block;">
+    <img src="assets/images/visiting-card-emerald-with-qr.jpg" alt="Tirupati Cottage - Master Royal Emerald Card with Real Bedroom Collage & Active QR Code" />
+    <div class="mockup-caption">
+      <strong>⭐ Official Master Design: Royal Forest Emerald &amp; Gold (with Active QR Code)</strong> &bull; Cottage emblem (S.M.A ILLAM), tilted genuine bedroom photos, Arasu Palani contact (+91 75984 30544), AC: ₹2,000 / Non-AC: ₹1,500 tariffs, and active QR code.
+      <span class="badge">Official Selection</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupIvoryQrView">
+    <img src="assets/images/visiting-card-ivory-with-qr.jpg" alt="Tirupati Cottage - Master Warm Ivory Card with Real Bedroom Collage & Active QR Code" />
+    <div class="mockup-caption">
+      <strong>⭐ Official Master Design: Warm Ivory &amp; Terracotta (with Active QR Code)</strong> &bull; Light and welcoming edition with genuine bedroom photos, Arasu Palani contact (+91 75984 30544), AC: ₹2,000 / Non-AC: ₹1,500 tariffs, and active QR code.
+      <span class="badge">Official Selection</span>
+    </div>
+  </div>
+
   <div class="mockup-container" id="mockupEmeraldView">
     <img src="assets/images/visiting-card-real-emerald.jpg" alt="Real Bedroom Photos Visiting Card Mockup - Forest Emerald Edition" />
     <div class="mockup-caption">
@@ -1199,7 +1217,13 @@
       printSheet.style.display = 'none';
       flipHint.style.display = 'none';
 
-      if (style === 'emerald') {
+      if (style === 'mockup-emerald-qr') {
+        document.getElementById('tabMockupEmeraldQr').classList.add('active');
+        document.getElementById('mockupEmeraldQrView').style.display = 'block';
+      } else if (style === 'mockup-ivory-qr') {
+        document.getElementById('tabMockupIvoryQr').classList.add('active');
+        document.getElementById('mockupIvoryQrView').style.display = 'block';
+      } else if (style === 'emerald') {
         document.getElementById('tabEmerald').classList.add('active');
         interactive.style.display = 'block';
         frontFace.className = 'card-face theme-emerald';
