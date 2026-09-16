@@ -640,6 +640,32 @@
       display: block;
     }
 
+    .mockup-caption {
+      background: #081a11;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 14px 20px;
+      font-size: 0.88rem;
+      color: #e5e7eb;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .mockup-caption strong {
+      color: var(--card-gold-light);
+    }
+
+    .mockup-caption span.badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: var(--card-gold);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-left: 8px;
+    }
+
     /* Print Sheet View */
     .print-sheet-container {
       display: none;
@@ -829,10 +855,16 @@
 
   <!-- Switch Design Tabs -->
   <div class="view-switcher" role="tablist">
-    <button class="view-tab active" id="tabEmerald" onclick="switchDesignStyle('emerald')">🌲 Royal Emerald Theme</button>
-    <button class="view-tab" id="tabIvory" onclick="switchDesignStyle('ivory')">🥂 Warm Ivory &amp; Gold</button>
-    <button class="view-tab" id="tabMockupEmerald" onclick="switchDesignStyle('mockup-emerald')">📸 3D Desk Mockup (Emerald)</button>
-    <button class="view-tab" id="tabMockupIvory" onclick="switchDesignStyle('mockup-ivory')">📸 3D Desk Mockup (Ivory)</button>
+    <button class="view-tab active" id="tabEmerald" onclick="switchDesignStyle('emerald')">🌲 4-Grid Emerald (3D)</button>
+    <button class="view-tab" id="tabIvory" onclick="switchDesignStyle('ivory')">🥂 4-Grid Ivory (3D)</button>
+    <button class="view-tab" id="tabMockupEmerald" onclick="switchDesignStyle('mockup-emerald')">📸 Desk Emerald</button>
+    <button class="view-tab" id="tabMockupIvory" onclick="switchDesignStyle('mockup-ivory')">📸 Desk Ivory</button>
+    <button class="view-tab" id="tabMockupBlack" onclick="switchDesignStyle('mockup-black')">📸 Desk Obsidian</button>
+    <button class="view-tab" id="tabMockupVertical" onclick="switchDesignStyle('mockup-vertical')">🏛️ Temple Arch Vertical</button>
+    <button class="view-tab" id="tabMockupDiagonal" onclick="switchDesignStyle('mockup-diagonal')">⚡ Chevron Diagonal</button>
+    <button class="view-tab" id="tabMockupKeycard" onclick="switchDesignStyle('mockup-keycard')">🔑 VIP Keycard</button>
+    <button class="view-tab" id="tabMockupFilmstrip" onclick="switchDesignStyle('mockup-filmstrip')">🎞️ 3-Frame Linen</button>
+    <button class="view-tab" id="tabMockupDual" onclick="switchDesignStyle('mockup-dual')">🪟 Dual Room Horizon</button>
     <button class="view-tab" id="tabPrint" onclick="switchDesignStyle('print')">🖨️ A4 Print Sheet</button>
   </div>
 
@@ -956,13 +988,69 @@
     </div>
   </div>
 
-  <!-- 2. Mockup Views -->
+  <!-- 2. Mockup Views (Real Bedroom Photos) -->
   <div class="mockup-container" id="mockupEmeraldView">
-    <img src="assets/images/visiting-card-4grid-emerald.jpg" alt="Photorealistic Luxury Emerald Visiting Card Mockup" />
+    <img src="assets/images/visiting-card-real-emerald.jpg" alt="Real Bedroom Photos Visiting Card Mockup - Forest Emerald Edition" />
+    <div class="mockup-caption">
+      <strong>Design 1: Royal Forest Emerald (4-Grid Split)</strong> &bull; The classic pilgrim cottage format based on your wireframe: 4 real bedroom photos on the left, owner contact, tariffs, and QR code on the right.
+      <span class="badge">Most Practical for Printing</span>
+    </div>
   </div>
 
   <div class="mockup-container" id="mockupIvoryView">
-    <img src="assets/images/visiting-card-4grid-ivory.jpg" alt="Photorealistic Luxury Ivory Visiting Card Mockup" />
+    <img src="assets/images/visiting-card-real-ivory.jpg" alt="Real Bedroom Photos Visiting Card Mockup - Warm Ivory Marble Edition" />
+    <div class="mockup-caption">
+      <strong>Design 2: Warm Ivory Marble &amp; Gold (4-Grid Split)</strong> &bull; Elegant light palette highlighting genuine bedroom cots and interior air conditioning units with brushed gold accents.
+      <span class="badge">Bright &amp; Inviting</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupBlackView">
+    <img src="assets/images/visiting-card-real-black.jpg" alt="Real Bedroom Photos Visiting Card Mockup - Matte Obsidian Black Edition" />
+    <div class="mockup-caption">
+      <strong>Design 3: Matte Obsidian Black &amp; Metallic Gold (4-Grid Split)</strong> &bull; High-contrast luxury executive stay aesthetic creating an ultra-premium boutique impression for Tiruvannamalai visitors.
+      <span class="badge">High Contrast</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupVerticalView">
+    <img src="assets/images/visiting-card-vertical-temple.jpg" alt="Temple Sanctum Arch Vertical Visiting Card" />
+    <div class="mockup-caption">
+      <strong>Unique Design 4: Temple Sanctum Arch (Vertical Heritage Card)</strong> &bull; Standing portrait orientation with a traditional Arunachaleswarar temple golden sanctum archway framing your real bedroom photo.
+      <span class="badge">Devotional Heritage</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupDiagonalView">
+    <img src="assets/images/visiting-card-diagonal-emerald.jpg" alt="Chevron Diagonal Luxury Visiting Card" />
+    <div class="mockup-caption">
+      <strong>Unique Design 5: Chevron Geometric Diagonal Cut</strong> &bull; Ultra-modern architectural angle showcasing your real bedroom photo on the left with beveled gold trim and rich emerald typography.
+      <span class="badge">Modern Architectural</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupKeycardView">
+    <img src="assets/images/visiting-card-keycard-gold.jpg" alt="VIP Suite Keycard Style Visiting Card" />
+    <div class="mockup-caption">
+      <strong>Unique Design 6: VIP Suite Keycard &amp; Panoramic Window</strong> &bull; Horizontal hotel keycard concept with an ultra-wide beveled gold window framing the real bedroom, creating a 5-star suite feel.
+      <span class="badge">VIP Hotel Suite</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupFilmstripView">
+    <img src="assets/images/visiting-card-filmstrip-ivory.jpg" alt="3-Frame Filmstrip Snapshot Visiting Card" />
+    <div class="mockup-caption">
+      <strong>Unique Design 7: 3-Frame Snapshot Gallery (Warm Linen Cardstock)</strong> &bull; Vertical photo-strip layout displaying 3 distinct real bedroom angles on tactile warm ivory linen cardstock.
+      <span class="badge">Artisanal Boutique</span>
+    </div>
+  </div>
+
+  <div class="mockup-container" id="mockupDualView">
+    <img src="assets/images/visiting-card-dual-window-black.jpg" alt="Dual Arched Horizon Visiting Card" />
+    <div class="mockup-caption">
+      <strong>Unique Design 8: Dual-Horizon Arched Frames (Matte Black Edition)</strong> &bull; Smooth rounded corners with two framed real bedroom perspectives side-by-side: AC Single &amp; Triple King cots.
+      <span class="badge">Dual Room Perspective</span>
+    </div>
   </div>
 
   <!-- 3. Print Ready Sheet View (A4 Grid of 8 cards: 4 Front + 4 Back) -->
@@ -1102,38 +1190,52 @@
     function switchDesignStyle(style) {
       document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
       const interactive = document.getElementById('interactiveView');
-      const mockupEmerald = document.getElementById('mockupEmeraldView');
-      const mockupIvory = document.getElementById('mockupIvoryView');
       const printSheet = document.getElementById('printSheetView');
       const flipHint = document.getElementById('flipHint');
       const frontFace = document.getElementById('cardFrontFace');
 
       interactive.style.display = 'none';
-      mockupEmerald.style.display = 'none';
-      mockupIvory.style.display = 'none';
+      document.querySelectorAll('.mockup-container').forEach(el => el.style.display = 'none');
       printSheet.style.display = 'none';
-      flipHint.style.display = 'inline-flex';
+      flipHint.style.display = 'none';
 
       if (style === 'emerald') {
         document.getElementById('tabEmerald').classList.add('active');
         interactive.style.display = 'block';
         frontFace.className = 'card-face theme-emerald';
+        flipHint.style.display = 'inline-flex';
       } else if (style === 'ivory') {
         document.getElementById('tabIvory').classList.add('active');
         interactive.style.display = 'block';
         frontFace.className = 'card-face theme-ivory';
+        flipHint.style.display = 'inline-flex';
       } else if (style === 'mockup-emerald') {
         document.getElementById('tabMockupEmerald').classList.add('active');
-        mockupEmerald.style.display = 'block';
-        flipHint.style.display = 'none';
+        document.getElementById('mockupEmeraldView').style.display = 'block';
       } else if (style === 'mockup-ivory') {
         document.getElementById('tabMockupIvory').classList.add('active');
-        mockupIvory.style.display = 'block';
-        flipHint.style.display = 'none';
+        document.getElementById('mockupIvoryView').style.display = 'block';
+      } else if (style === 'mockup-black') {
+        document.getElementById('tabMockupBlack').classList.add('active');
+        document.getElementById('mockupBlackView').style.display = 'block';
+      } else if (style === 'mockup-vertical') {
+        document.getElementById('tabMockupVertical').classList.add('active');
+        document.getElementById('mockupVerticalView').style.display = 'block';
+      } else if (style === 'mockup-diagonal') {
+        document.getElementById('tabMockupDiagonal').classList.add('active');
+        document.getElementById('mockupDiagonalView').style.display = 'block';
+      } else if (style === 'mockup-keycard') {
+        document.getElementById('tabMockupKeycard').classList.add('active');
+        document.getElementById('mockupKeycardView').style.display = 'block';
+      } else if (style === 'mockup-filmstrip') {
+        document.getElementById('tabMockupFilmstrip').classList.add('active');
+        document.getElementById('mockupFilmstripView').style.display = 'block';
+      } else if (style === 'mockup-dual') {
+        document.getElementById('tabMockupDual').classList.add('active');
+        document.getElementById('mockupDualView').style.display = 'block';
       } else if (style === 'print') {
         document.getElementById('tabPrint').classList.add('active');
         printSheet.style.display = 'block';
-        flipHint.style.display = 'none';
       }
     }
   </script>
