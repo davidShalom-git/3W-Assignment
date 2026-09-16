@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tirupati Cottage - Official Visiting Card & Print Ready Suite</title>
+  <meta name="description" content="Official luxury visiting card designs for Tirupati Cottage, Tiruvannamalai. Featuring verified active QR code, modern facade, and A4 print-ready sheet." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --card-green-dark: #062319;
+      --card-green-mid: #0a3826;
+      --card-green-light: #145339;
+      --card-gold: #d4af37;
+      --card-gold-light: #fbeea4;
+      --card-gold-glow: rgba(212, 175, 55, 0.35);
+      --card-cream: #faf5ea;
+      --card-cream-bg: #fbf8f1;
+      --card-text-muted: #9ca3af;
+      --bg-slate: #070e0a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at 50% 12%, #12281e, #060c09 85%);
+      color: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 14px 70px;
+    }
+
+    /* Top Navigation Toolbar */
+    .top-toolbar {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #f3f4f6;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.3px;
+    }
+
+    .toolbar-left:hover {
+      color: var(--card-gold);
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #d4af37, #b88d1d);
+      color: #061910;
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-print:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.55);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e5e7eb;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+    }
+
+    .btn-success-pill {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      font-size: 0.76rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Header Banner */
+    .title-banner {
+      text-align: center;
+      margin-bottom: 20px;
+      max-width: 740px;
+    }
+
+    .title-banner h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.6rem, 4vw, 2.3rem);
+      font-weight: 700;
+      color: #faf7ee;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .title-banner p {
+      color: #b0b8b3;
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .qr-status-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(10, 40, 28, 0.85);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #d1fae5;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+      display: inline-block;
+    }
+
+    .price-highlight-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--card-gold-light);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    /* Design Selector Tabs */
+    .view-switcher {
+      display: flex;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin-bottom: 22px;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .view-tab {
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: transparent;
+      border: none;
+      color: #a0aec0;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .view-tab.active {
+      background: #0e3b26;
+      color: #faf7ee;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Flip Hint */
+    .badge-flip-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--card-gold);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      cursor: pointer;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px dashed rgba(212, 175, 55, 0.4);
+      padding: 5px 14px;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .badge-flip-hint:hover {
+      background: rgba(212, 175, 55, 0.18);
+    }
+
+    /* 3D Card Scene */
+    .card-scene {
+      width: 100%;
+      max-width: 600px;
+      perspective: 1200px;
+      margin-bottom: 26px;
+      cursor: pointer;
+    }
+
+    .card-flipper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1024 / 585;
+      transform-style: preserve-3d;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 35px rgba(20, 70, 45, 0.35);
+    }
+
+    .card-flipper.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      overflow: hidden;
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
+    }
+
+    /* Modern Luxury Front Face */
+    .front-modern {
+      background: #fbf8f1;
+      position: relative;
+    }
+
+    .modern-img-card {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+    }
+
+    /* Interactive QR Hotspot on Front Face */
+    .qr-interactive-overlay {
+      position: absolute;
+      top: 19.5%;
+      right: 2.2%;
+      width: 18%;
+      height: 38%;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      transition: all 0.2s ease;
+      z-index: 5;
+    }
+
+    .qr-interactive-overlay:hover {
+      box-shadow: 0 0 16px rgba(52, 211, 153, 0.8);
+      outline: 2px solid #10b981;
+    }
+
+    .qr-scan-badge-live {
+      opacity: 0;
+      background: rgba(6, 35, 25, 0.9);
+      color: #34d399;
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 2px;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .qr-interactive-overlay:hover .qr-scan-badge-live {
+      opacity: 1;
+    }
+
+    /* Phone Dial Hotspot */
+    .phone-interactive-overlay {
+      position: absolute;
+      top: 67%;
+      right: 12.5%;
+      width: 36%;
+      height: 14%;
+      border-radius: 999px;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .phone-interactive-overlay:hover {
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.7);
+      outline: 2px solid var(--card-gold);
+    }
+
+    /* Luxury Emerald Back Face */
+    .card-face.back-dark {
+      background: linear-gradient(135deg, #072618 0%, #03140d 100%);
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      gap: 16px;
+    }
+
+    .back-dark::before {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 9px;
+      pointer-events: none;
+    }
+
+    .back-left-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .back-header-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .back-brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    .back-brand-tagline {
+      font-size: 0.64rem;
+      color: var(--card-gold-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .tariff-box-back {
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 8px;
+      padding: 6px 12px;
+      margin-bottom: 8px;
+    }
+
+    .tariff-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+    }
+
+    .tariff-row .t-ac {
+      color: var(--card-gold-light);
+    }
+
+    .tariff-row .t-period {
+      font-size: 0.62rem;
+      color: var(--card-gold);
+      font-weight: 600;
+    }
+
+    .back-amenities {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px 8px;
+      margin-bottom: 8px;
+    }
+
+    .back-amenity-item {
+      font-size: 0.66rem;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 500;
+    }
+
+    .back-amenity-item span.bullet {
+      color: var(--card-gold);
+      font-size: 0.65rem;
+    }
+
+    .back-contact-row {
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+      padding-top: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-owner-name {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .back-owner-phone {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--card-gold-light);
+      text-decoration: none;
+    }
+
+    .back-right-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+      gap: 6px;
+    }
+
+    .qr-badge-card {
+      background: #ffffff;
+      padding: 6px;
+      border-radius: 8px;
+      border: 2px solid var(--card-gold);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-badge-card img {
+      width: 86px;
+      height: 86px;
+      display: block;
+      image-rendering: pixelated;
+    }
+
+    .qr-badge-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: var(--card-gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    .back-web-link {
+      font-size: 0.6rem;
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Actions Hub (Download & Print Options) */
+    .actions-hub {
+      width: 100%;
+      max-width: 820px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .actions-hub-title {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .actions-hub-title h3 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #f3f4f6;
+    }
+
+    .actions-hub-title p {
+      font-size: 0.78rem;
+      color: #9ca3af;
+    }
+
+    .actions-hub-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-download-asset {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      color: var(--card-gold-light);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-download-asset:hover {
+      background: rgba(212, 175, 55, 0.25);
+      transform: translateY(-1px);
+    }
+
+    /* QR Test & Live Verification Box */
+    .qr-verify-box {
+      width: 100%;
+      max-width: 820px;
+      background: rgba(7, 30, 20, 0.6);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .qr-verify-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .qr-icon-large {
+      width: 44px;
+      height: 44px;
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #34d399;
+    }
+
+    .qr-verify-text h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #f9fafb;
+    }
+
+    .qr-verify-text p {
+      font-size: 0.8rem;
+      color: #a7f3d0;
+      margin-top: 2px;
+    }
+
+    .qr-verify-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-test-url {
+      background: #10b981;
+      color: #061e14;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 7px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-test-url:hover {
+      background: #34d399;
+    }
+
+    /* Print Ready Sheet View (A4 Grid of Standard 3.5" x 2" Cards) */
+    .print-sheet-container {
+      display: none;
+      width: 100%;
+      max-width: 900px;
+      background: #ffffff;
+      padding: 30px 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .print-sheet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #0d402c;
+      padding-bottom: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .print-sheet-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: #062319;
+      font-weight: 700;
+    }
+
+    .print-sheet-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .print-select {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #94a3b8;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: #f8fafc;
+      color: #1e293b;
+      cursor: pointer;
+    }
+
+    .print-sheet-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      background: #ffffff;
+    }
+
+    .print-card-box {
+      aspect-ratio: 1024 / 585;
+      border: 1px dashed #94a3b8;
+      padding: 2px;
+      position: relative;
+      background: #ffffff;
+      box-sizing: border-box;
+    }
+
+    .print-card-box::after {
+      content: '✂';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      font-size: 0.65rem;
+      color: #64748b;
+      background: #ffffff;
+      padding: 0 2px;
+    }
+
+    .print-card-box .card-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      box-shadow: none;
+      border: none;
+    }
+
+    .print-card-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Print Tips */
+    .print-tips-card {
+      margin-top: 18px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.8rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .print-tips-card strong {
+      color: #0f172a;
+    }
+
+    /* Desk Mockup View */
+    .mockup-container {
+      display: none;
+      width: 100%;
+      max-width: 850px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .mockup-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Specifications Grid */
+    .specs-grid {
+      width: 100%;
+      max-width: 820px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .spec-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+
+    .spec-card h3 {
+      font-size: 0.84rem;
+      color: var(--card-gold);
+      margin-bottom: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .spec-card p {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
+
+    /* Print CSS for Direct Printer Output */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm;
+      }
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .top-toolbar, .title-banner, .view-switcher, .badge-flip-hint, .card-scene, .actions-hub, .qr-verify-box, .mockup-container, .specs-grid, .print-sheet-header, .print-tips-card {
+        display: none !important;
+      }
+      .print-sheet-container {
+        display: block !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
+        border: none !important;
+      }
+      .print-sheet-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 88.9mm) !important;
+        grid-auto-rows: 50.8mm !important;
+        gap: 5mm !important;
+        justify-content: center !important;
+        page-break-inside: avoid !important;
+      }
+      .print-card-box {
+        width: 88.9mm !important;
+        height: 50.8mm !important;
+        border: 0.5pt dashed #888888 !important;
+        page-break-inside: avoid !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .print-card-box .card-face {
+        border-radius: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+
+    /* Mobile Responsive Tweaks */
+    @media (max-width: 640px) {
+      .top-toolbar {
+        border-radius: 16px;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+      }
+      .toolbar-actions {
+        justify-content: center;
+      }
+      .actions-hub {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .actions-hub-buttons {
+        flex-direction: column;
+      }
+      .qr-verify-box {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .print-sheet-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Toolbar -->
+  <header class="top-toolbar">
+    <a href="index.html" class="toolbar-left">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span>Tirupati Cottage Live Portal</span>
+    </a>
+    <div class="toolbar-actions">
+      <button onclick="switchDesign('print')" class="btn-action btn-print">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span>Print Visiting Cards</span>
+      </button>
+      <a href="assets/images/visiting-card-modern-fixed.png" download="Tirupati-Cottage-Visiting-Card.png" class="btn-action btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Download Card</span>
+      </a>
+      <a href="qr.html" class="btn-action btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <span>Standee View</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Title Banner -->
+  <div class="title-banner">
+    <h1>Official Visiting Card & Print Suite</h1>
+    <p>Standard 3.5" &times; 2" Business Card • Luxury Night Facade • Fully Scannable Active QR Code</p>
+    
+    <div>
+      <div class="qr-status-bar">
+        <span class="status-dot"></span>
+        <span>Active QR Code: 100% Tested & Camera Scannable</span>
+        <span class="btn-success-pill">✓ Verified</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="price-highlight-pill">
+        <span>❄️ With AC: ₹2,000 / Day & Night</span>
+        <span>•</span>
+        <span>🌿 Without AC: ₹1,500 / Day & Night</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Switch View Tabs -->
+  <div class="view-switcher" role="tablist">
+    <button class="view-tab active" id="tabModern" onclick="switchDesign('modern')">✨ Modern Edition (Active QR)</button>
+    <button class="view-tab" id="tabPrint" onclick="switchDesign('print')">🖨️ A4 Print-Ready Sheet</button>
+    <button class="view-tab" id="tabBuilding" onclick="switchDesign('building')">🏢 Building Photo Edition</button>
+    <button class="view-tab" id="tabClassic" onclick="switchDesign('classic')">👑 Royal Emerald Edition</button>
+    <button class="view-tab" id="tabMockup" onclick="switchDesign('mockup')">📸 Desk Mockup View</button>
+  </div>
+
+  <!-- Flip instruction badge -->
+  <div class="badge-flip-hint" onclick="toggleCardFlip()" id="flipHint">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+    <span>Tap Card to Flip: Front (Resort & QR) ⇄ Back (Rates & Amenities)</span>
+  </div>
+
+  <!-- 1. Interactive 3D Card Scene -->
+  <div class="card-scene" id="interactiveView" onclick="toggleCardFlip()">
+    <div class="card-flipper" id="cardFlipper">
+      
+      <!-- FRONT SIDE (Modern Luxury Edition with Working QR Code) -->
+      <div class="card-face front-modern" id="cardFrontFace">
+        <img src="assets/images/visiting-card-modern-fixed.png" alt="Tirupati Cottage Luxury Visiting Card with Working QR Code" class="modern-img-card" />
+        
+        <!-- Interactive Clickable Hotspots -->
+        <a href="https://room-showcase-ashen.vercel.app" target="_blank" class="qr-interactive-overlay" onclick="event.stopPropagation()" title="Scan or Click to open Room Showcase">
+          <span class="qr-scan-badge-live">Tap to Open</span>
+        </a>
+
+        <a href="tel:+917598430544" class="phone-interactive-overlay" onclick="event.stopPropagation()" title="Click to Call Arasu Palani (+91 75984 30544)">
+        </a>
+      </div>
+
+      <!-- BACK SIDE (Luxury Emerald & Gold with Tariffs, Amenities & Contact) -->
+      <div class="card-face back-dark" id="cardBackFace">
+        <div class="back-left-col">
+          <div class="back-header-row">
+            <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#d4af37,#967414);color:#061f14;font-family:'Cinzel',serif;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:0.95rem;">T</div>
+            <div>
+              <div class="back-brand-title">Tirupati Cottage</div>
+              <div class="back-brand-tagline">STAY • RELAX • EXPLORE • S.M.A ILLAM</div>
+            </div>
+          </div>
+          
+          <div class="tariff-box-back">
+            <div class="tariff-row">
+              <span class="t-ac">❄️ AC Deluxe Room: ₹2,000</span>
+              <span class="t-period">/ Day & Night</span>
+            </div>
+            <div class="tariff-row" style="margin-top:2px;">
+              <span style="color:#e2e8f0;">🌿 Non-AC Standard: ₹1,500</span>
+              <span class="t-period">/ Day & Night</span>
+            </div>
+          </div>
+
+          <div class="back-amenities">
+            <div class="back-amenity-item"><span class="bullet">◆</span> Attached Baths + Heater</div>
+            <div class="back-amenity-item"><span class="bullet">◆</span> Private Kitchen Setup</div>
+            <div class="back-amenity-item"><span class="bullet">◆</span> Secure Car & Bike Parking</div>
+            <div class="back-amenity-item"><span class="bullet">◆</span> Mount Arunachala View</div>
+          </div>
+
+          <div class="back-contact-row">
+            <div>
+              <div class="back-owner-name">Arasu Palani (Proprietor)</div>
+              <div style="font-size:0.56rem;color:#bbf7d0;">Near Arunachaleswarar Temple, Tiruvannamalai</div>
+            </div>
+            <a href="tel:+917598430544" class="back-owner-phone" onclick="event.stopPropagation()">
+              📞 +91 75984 30544
+            </a>
+          </div>
+        </div>
+
+        <div class="back-right-col">
+          <div class="qr-badge-card">
+            <img src="assets/images/qr-code.png" alt="Scan QR Code for Tirupati Cottage" />
+          </div>
+          <div class="qr-badge-label">SCAN TO BOOK ONLINE</div>
+          <a href="https://room-showcase-ashen.vercel.app" target="_blank" class="back-web-link" onclick="event.stopPropagation()">
+            room-showcase-ashen.vercel.app
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- QR Live Verification & Mobile Camera Test Box -->
+  <div class="qr-verify-box" id="qrVerifyBox">
+    <div class="qr-verify-info">
+      <div class="qr-icon-large">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </div>
+      <div class="qr-verify-text">
+        <h4>📱 Mobile QR Camera Scan Test</h4>
+        <p>Point any smartphone camera directly at the screen or printed card to test instant redirection.</p>
+      </div>
+    </div>
+    <div class="qr-verify-actions">
+      <a href="https://room-showcase-ashen.vercel.app" target="_blank" class="btn-test-url">
+        <span>Open Destination URL</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Download & Print Actions Hub -->
+  <div class="actions-hub">
+    <div class="actions-hub-title">
+      <h3>Print & High-Resolution Asset Hub</h3>
+      <p>Download certified 300 DPI image files for printing shops (Canva, Vistaprint, local presses) or print at home.</p>
+    </div>
+    <div class="actions-hub-buttons">
+      <button onclick="switchDesign('print'); setTimeout(function(){ window.print(); }, 300);" class="btn-download-asset" style="background:linear-gradient(135deg,#d4af37,#b88d1d); color:#061910; font-weight:700;">
+        🖨️ Print A4 Sheet
+      </button>
+      <a href="assets/images/visiting-card-print-300dpi.png" download="Tirupati-Cottage-Front-300DPI.png" class="btn-download-asset">
+        💾 Front Card (300 DPI PNG)
+      </a>
+      <a href="assets/images/visiting-card-modern-fixed.jpg" download="Tirupati-Cottage-Front.jpg" class="btn-download-asset">
+        💾 Front Card (JPG)
+      </a>
+      <a href="assets/images/qr-code.png" download="Tirupati-Cottage-QR.png" class="btn-download-asset">
+        💾 QR Code (PNG)
+      </a>
+      <a href="assets/images/qr-code.svg" download="Tirupati-Cottage-QR.svg" class="btn-download-asset">
+        💾 Vector QR (SVG)
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. Print Ready Sheet View (A4 Grid of 8 cards with Cutting Crop Marks) -->
+  <div class="print-sheet-container" id="printSheetView">
+    <div class="print-sheet-header">
+      <div>
+        <h2>Tirupati Cottage - Standard 3.5" &times; 2" Visiting Card Sheet</h2>
+        <p style="font-size:0.8rem; color:#475569; margin-top:2px;">A4 Portrait Format (88.9mm &times; 50.8mm per card) with scissors cutting guidelines</p>
+      </div>
+      <div class="print-sheet-controls">
+        <select class="print-select" id="printLayoutSelect" onchange="updatePrintLayout(this.value)">
+          <option value="modern-front">8 Cards - Modern Edition (Front Only)</option>
+          <option value="double-sided">8 Cards - Double Sided (4 Front + 4 Back)</option>
+          <option value="classic">8 Cards - Building Photo Edition</option>
+        </select>
+        <button onclick="window.print()" class="btn-action btn-print" style="padding:6px 14px; font-size:0.82rem;">
+          🖨️ Print Now (Ctrl+P)
+        </button>
+      </div>
+    </div>
+
+    <div class="print-sheet-grid" id="printGridContent">
+      <!-- 8 Cards populated by JavaScript based on selected layout -->
+    </div>
+
+    <div class="print-tips-card">
+      <strong>💡 Printing Recommendations for Best Quality:</strong><br/>
+      1. <strong>Paper:</strong> Use 250 GSM to 350 GSM Matte or Glossy Art Cardstock for durable, premium feel.<br/>
+      2. <strong>Printer Dialog Settings:</strong> Set <em>Destination</em> to your printer, <em>Paper Size</em> to <strong>A4</strong>, <em>Scale</em> to <strong>100% (Actual Size)</strong>, and turn <strong>Background Graphics ON</strong>.<br/>
+      3. <strong>Cutting:</strong> Cut cleanly along the dashed border lines (✂) with a paper trimmer or ruler & cutter.
+    </div>
+  </div>
+
+  <!-- 3. Photorealistic Desk Mockup View -->
+  <div class="mockup-container" id="mockupView">
+    <img src="assets/images/visiting-card-mockup.jpg" alt="Photorealistic Luxury Visiting Card Mockup" />
+  </div>
+
+  <!-- Specifications Grid -->
+  <div class="specs-grid">
+    <div class="spec-card">
+      <h3>Active Camera QR Code</h3>
+      <p>Tested and verified with mobile scanners. Instantly redirects to <code>room-showcase-ashen.vercel.app</code> with full photo galleries and GPS guidance.</p>
+    </div>
+    <div class="spec-card">
+      <h3>Confirmed Room Tariffs</h3>
+      <p><strong>With AC: ₹2,000</strong> &bull; <strong>Without AC: ₹1,500</strong> per Day & Night (24-Hour Stay) for honest, zero-commission pilgrimage bookings.</p>
+    </div>
+    <div class="spec-card">
+      <h3>Direct Host Contact</h3>
+      <p>Proprietor <strong>Arasu Palani (+91 75984 30544)</strong> with prominent landmark <strong>S.M.A ILLAM</strong> gate for effortless arrivals.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleCardFlip() {
+      const flipper = document.getElementById('cardFlipper');
+      flipper.classList.toggle('is-flipped');
+    }
+
+    function renderPrintGrid(mode) {
+      const grid = document.getElementById('printGridContent');
+      if (!grid) return;
+
+      let html = '';
+
+      if (mode === 'modern-front') {
+        // 8 Front Modern Cards
+        for (let i = 0; i < 8; i++) {
+          html += `
+            <div class="print-card-box">
+              <img src="assets/images/visiting-card-modern-fixed.png" alt="Tirupati Cottage Card Front" />
+            </div>
+          `;
+        }
+      } else if (mode === 'double-sided') {
+        // 4 Front + 4 Back
+        for (let i = 0; i < 4; i++) {
+          html += `
+            <div class="print-card-box">
+              <img src="assets/images/visiting-card-modern-fixed.png" alt="Tirupati Cottage Card Front" />
+            </div>
+            <div class="print-card-box">
+              <div class="card-face back-dark" style="transform:none; border-radius:0; padding:12px 14px;">
+                <div class="back-left-col">
+                  <div class="back-header-row" style="margin-bottom:4px;">
+                    <div style="width:20px;height:20px;border-radius:50%;background:#d4af37;color:#061f14;font-size:0.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;">T</div>
+                    <div>
+                      <div class="back-brand-title" style="font-size:0.85rem;">Tirupati Cottage</div>
+                      <div class="back-brand-tagline" style="font-size:0.5rem;">S.M.A ILLAM • TIRUVANNAMALAI</div>
+                    </div>
+                  </div>
+                  <div class="tariff-box-back" style="padding:4px 8px; margin-bottom:4px;">
+                    <div class="tariff-row" style="font-size:0.64rem;"><span>❄️ AC Deluxe: ₹2,000</span><span>/ Day & Night</span></div>
+                    <div class="tariff-row" style="font-size:0.64rem; margin-top:2px;"><span>🌿 Non-AC: ₹1,500</span><span>/ Day & Night</span></div>
+                  </div>
+                  <div class="back-amenities" style="gap:2px 4px; margin-bottom:4px;">
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Attached Baths</div>
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Kitchen Setup</div>
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Car Parking</div>
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Mountain View</div>
+                  </div>
+                  <div class="back-contact-row" style="padding-top:3px;">
+                    <span style="font-size:0.6rem; color:#fde68a;">Arasu Palani</span>
+                    <span style="font-size:0.6rem; color:#fff; font-weight:700;">+91 75984 30544</span>
+                  </div>
+                </div>
+                <div class="back-right-col" style="gap:3px;">
+                  <div class="qr-badge-card" style="padding:3px;">
+                    <img src="assets/images/qr-code.png" alt="QR" style="width:62px;height:62px;" />
+                  </div>
+                  <div class="qr-badge-label" style="font-size:0.5rem;">Scan to Book</div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      } else if (mode === 'classic') {
+        // 8 Building Classic Cards
+        for (let i = 0; i < 4; i++) {
+          html += `
+            <div class="print-card-box">
+              <div class="card-face" style="position:relative; width:100%; height:100%; border-radius:0; padding:0; background:#061910;">
+                <img src="assets/Single-rooms-2/exterior.jpeg" alt="Cottage" style="width:100%; height:100%; object-fit:cover;" />
+                <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(7,26,17,0.88) 0%, rgba(7,26,17,0.3) 40%, rgba(5,18,12,0.95) 100%);"></div>
+                <div style="position:absolute; inset:4px; border:1px solid rgba(212,175,55,0.6); pointer-events:none;"></div>
+                <div style="position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:10px 12px;">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div style="display:flex; align-items:center; gap:6px;">
+                      <div style="width:20px;height:20px;border-radius:50%;background:#d4af37;color:#061f14;font-size:0.75rem;font-weight:800;display:flex;align-items:center;justify-content:center;">T</div>
+                      <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:#fff;font-weight:700;">Tirupati Cottage</div>
+                    </div>
+                    <span style="font-size:0.55rem;background:#000;color:#fde68a;padding:2px 6px;border-radius:3px;border:1px solid #d4af37;">S.M.A ILLAM</span>
+                  </div>
+                  <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid rgba(212,175,55,0.3); padding-top:4px;">
+                    <div>
+                      <div style="font-size:0.75rem;font-weight:700;color:#fff;">Arasu Palani</div>
+                      <div style="font-size:0.62rem;color:#fde68a;">+91 75984 30544</div>
+                    </div>
+                    <div style="font-size:0.5rem;color:#bbf7d0;">Near Temple, Tiruvannamalai</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="print-card-box">
+              <div class="card-face back-dark" style="transform:none; border-radius:0; padding:10px 12px;">
+                <div class="back-left-col">
+                  <div class="tariff-box-back" style="padding:4px 8px; margin-bottom:4px;">
+                    <div class="tariff-row" style="font-size:0.64rem;"><span>❄️ AC: ₹2,000</span><span>/ 24 Hrs</span></div>
+                    <div class="tariff-row" style="font-size:0.64rem; margin-top:2px;"><span>🌿 Non-AC: ₹1,500</span><span>/ 24 Hrs</span></div>
+                  </div>
+                  <div class="back-amenities" style="gap:2px 4px; margin-bottom:4px;">
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Attached Baths</div>
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Kitchen Setup</div>
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> Car Parking</div>
+                    <div class="back-amenity-item" style="font-size:0.54rem;"><span>◆</span> 24/7 Hot Water</div>
+                  </div>
+                  <div style="font-size:0.55rem; color:#93c5fd;">room-showcase-ashen.vercel.app</div>
+                </div>
+                <div class="back-right-col" style="gap:2px;">
+                  <div class="qr-badge-card" style="padding:3px;"><img src="assets/images/qr-code.png" alt="QR" style="width:60px;height:60px;" /></div>
+                  <div class="qr-badge-label" style="font-size:0.5rem;">Scan to Book</div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      grid.innerHTML = html;
+    }
+
+    function updatePrintLayout(val) {
+      renderPrintGrid(val);
+    }
+
+    function switchDesign(design) {
+      document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+      const interactive = document.getElementById('interactiveView');
+      const mockup = document.getElementById('mockupView');
+      const printSheet = document.getElementById('printSheetView');
+      const flipHint = document.getElementById('flipHint');
+      const qrVerify = document.getElementById('qrVerifyBox');
+      const frontFace = document.getElementById('cardFrontFace');
+      const flipper = document.getElementById('cardFlipper');
+
+      // Reset flip
+      flipper.classList.remove('is-flipped');
+
+      interactive.style.display = 'none';
+      mockup.style.display = 'none';
+      printSheet.style.display = 'none';
+      flipHint.style.display = 'inline-flex';
+      qrVerify.style.display = 'flex';
+
+      if (design === 'modern') {
+        document.getElementById('tabModern').classList.add('active');
+        interactive.style.display = 'block';
+        frontFace.className = 'card-face front-modern';
+        frontFace.innerHTML = `
+          <img src="assets/images/visiting-card-modern-fixed.png" alt="Tirupati Cottage Luxury Visiting Card with Working QR Code" class="modern-img-card" />
+          <a href="https://room-showcase-ashen.vercel.app" target="_blank" class="qr-interactive-overlay" onclick="event.stopPropagation()" title="Scan or Click to open Room Showcase">
+            <span class="qr-scan-badge-live">Tap to Open</span>
+          </a>
+          <a href="tel:+917598430544" class="phone-interactive-overlay" onclick="event.stopPropagation()" title="Click to Call (+91 75984 30544)">
+          </a>
+        `;
+      } else if (design === 'print') {
+        document.getElementById('tabPrint').classList.add('active');
+        printSheet.style.display = 'block';
+        flipHint.style.display = 'none';
+        qrVerify.style.display = 'none';
+        renderPrintGrid(document.getElementById('printLayoutSelect').value);
+      } else if (design === 'building') {
+        document.getElementById('tabBuilding').classList.add('active');
+        interactive.style.display = 'block';
+        frontFace.className = 'card-face front-building';
+        frontFace.innerHTML = `
+          <img src="assets/Single-rooms-2/exterior.jpeg" alt="Tirupati Cottage - S.M.A ILLAM Facade" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center top;" />
+          <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(7,26,17,0.92) 0%, rgba(7,26,17,0.35) 35%, rgba(7,26,17,0.4) 60%, rgba(5,18,12,0.95) 100%);"></div>
+          <div style="position:absolute; inset:6px; border:1.5px solid rgba(212,175,55,0.65); border-radius:9px; pointer-events:none;"></div>
+          <div style="position:relative; z-index:2; height:100%; display:flex; flex-direction:column; justify-content:space-between; padding:16px 20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#d4af37,#967414);color:#061f14;font-family:'Cinzel',serif;font-size:1.05rem;font-weight:800;display:flex;align-items:center;justify-content:center;border:1px solid #fff2b8;">T</div>
+                <div>
+                  <div style="font-family:'Cinzel',serif;font-size:1.18rem;font-weight:700;color:#fff;letter-spacing:1px;">Tirupati Cottage</div>
+                  <div style="font-size:0.65rem; color:#fde68a;">திருபதி காட்டேஜ் • Guest Stay</div>
+                </div>
+              </div>
+              <div style="background:rgba(0,0,0,0.65);border:1px solid #d4af37;color:#fde68a;padding:3px 8px;border-radius:4px;font-size:0.64rem;font-weight:700;">S.M.A ILLAM</div>
+            </div>
+            <div style="display:flex; justify-content:center;">
+              <div style="background:rgba(8,28,19,0.75);border:1px solid rgba(212,175,55,0.4);padding:4px 12px;border-radius:999px;font-size:0.72rem;color:#fde68a;font-weight:600;">Arunachala Mountain & Temple View Cottage</div>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid rgba(212,175,55,0.3); padding-top:8px;">
+              <div>
+                <div style="font-family:'Cinzel',serif;font-size:1.05rem;font-weight:700;color:#fff;">Arasu Palani</div>
+                <a href="tel:+917598430544" style="font-size:0.82rem;font-weight:700;color:#fde68a;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:2px;" onclick="event.stopPropagation()">
+                  📞 +91 75984 30544
+                </a>
+              </div>
+              <div style="font-size:0.6rem;color:#e5e7eb;">Near Arunachaleswarar Temple, Tiruvannamalai</div>
+            </div>
+          </div>
+        `;
+      } else if (design === 'classic') {
+        document.getElementById('tabClassic').classList.add('active');
+        interactive.style.display = 'block';
+        frontFace.className = 'card-face front-classic';
+        frontFace.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; z-index:1;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:38px;height:38px;border-radius:50%;background:#d4af37;color:#061f14;font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;">T</div>
+              <div>
+                <div style="font-family:'Cinzel',serif;font-size:1.25rem;font-weight:700;color:#fff;">Tirupati Cottage</div>
+                <div style="font-size:0.7rem; color:var(--card-gold-light);">திருபதி காட்டேஜ் • Guest Stay</div>
+              </div>
+            </div>
+            <div style="background:rgba(0,0,0,0.65);border:1px solid #d4af37;color:#fde68a;padding:3px 8px;border-radius:4px;font-size:0.64rem;font-weight:700;">S.M.A ILLAM</div>
+          </div>
+
+          <div style="text-align:center; z-index:1; margin: 10px 0;">
+            <div style="font-family:'Cinzel',serif; font-size:1.15rem; font-weight:700; color:#ffffff;">Arasu Palani</div>
+            <div style="font-size:0.75rem; color:var(--card-gold); font-weight:600; text-transform:uppercase; letter-spacing:1px;">Managing Host & Proprietor</div>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(212,175,55,0.3); padding-top:8px; z-index:1;">
+            <a href="tel:+917598430544" style="font-size:0.82rem;font-weight:700;color:#fde68a;text-decoration:none;display:inline-flex;align-items:center;gap:4px;" onclick="event.stopPropagation()">
+              📞 +91 75984 30544
+            </a>
+            <div style="font-size:0.6rem;color:#e5e7eb;">Near Temple, Tiruvannamalai</div>
+          </div>
+        `;
+      } else if (design === 'mockup') {
+        document.getElementById('tabMockup').classList.add('active');
+        mockup.style.display = 'block';
+        flipHint.style.display = 'none';
+        qrVerify.style.display = 'none';
+      }
+    }
+
+    // Check URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialDesign = urlParams.get('design') || urlParams.get('tab');
+    const initialLayout = urlParams.get('layout') || 'modern-front';
+    
+    if (document.getElementById('printLayoutSelect')) {
+      document.getElementById('printLayoutSelect').value = initialLayout;
+    }
+
+    if (initialDesign && ['print', 'building', 'classic', 'mockup'].includes(initialDesign)) {
+      switchDesign(initialDesign);
+    } else {
+      renderPrintGrid(initialLayout);
+    }
+  </script>
+</body>
+</html>
